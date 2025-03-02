@@ -78,7 +78,6 @@ def extract_passive_tree(xml_root):
     """Extracts passive skill tree data."""
     passive_tree = {
         "nodes": [],
-        "masteries": []
     }
 
     tree_section = xml_root.find(".//Tree")
@@ -92,10 +91,6 @@ def extract_passive_tree(xml_root):
     nodes_attr = spec_element.attrib.get("nodes", "")
     if nodes_attr:
         passive_tree["nodes"] = nodes_attr.split(",")
-
-    masteries_attr = spec_element.attrib.get("masteryEffects", "")
-    if masteries_attr:
-        passive_tree["masteries"] = masteries_attr.split(",")
 
     return passive_tree
 
