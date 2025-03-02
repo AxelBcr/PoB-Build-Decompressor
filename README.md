@@ -1,64 +1,62 @@
 # SVG Decompressor
 
-## Special Note
-This script was created to decompress SVG-encoded files from Path of Building. The main goal is to transform the data into something understandable to any algorithm, AI, or learning model... (but you can use it as you want !)
+## Special Note  
+This script was created to decompress SVG-encoded files from **Path of Building (PoE2)**. The main goal is to transform the data into something understandable to any algorithm, AI, or learning model. However, you are free to use it as you want!  
 
-## Overview
-This Python script decompresses a base64-encoded and zlib-compressed SVG file, parses its XML structure, and saves both the XML and a JSON representation of the data. It reads the encoded data from `build.txt`, decodes and decompresses it, parses the XML structure, removes null values, and saves the results into `decompressed_build.xml` and `decompressed_build.json`.
+## Overview  
+This Python script performs the following tasks:  
+- Reads a **base64-encoded** and **zlib-compressed** SVG string from a file  
+- Decodes and decompresses the string to retrieve an XML representation  
+- Parses the XML structure and extracts meaningful game data  
+- Removes null values and structures the extracted information  
+- Saves the results as a JSON file for further processing  
 
-## Features
-- Reads compressed and base64-encoded SVG data from a file
-- Decodes the base64 string
-- Attempts to decompress using multiple `wbits` values for robustness
-- Converts XML to a structured dictionary while handling attributes and multiple child elements
-- Filters out null values from the parsed XML data
-- Saves the decompressed SVG content into an XML file
-- Saves the structured XML data into a JSON file
+The extracted data includes **player information, stats, passive tree nodes, skills, and items**.  
 
-## Installation
-Ensure you have Python 3 installed, then clone the repository and navigate to the project directory:
+## Features  
+- Reads compressed and base64-encoded SVG data from a file  
+- Decodes and decompresses it using multiple methods for robustness  
+- Parses the XML structure to extract:  
+  - **Player Info** (Level, Class, Ascendancy)  
+  - **Player Stats**  
+  - **Passive Skill Tree**   
+  - **Skills & Gems**  
+  - **Items & Equipment**  
+- Cleans the data by removing null values  
+- Saves the structured data into a JSON file  
 
-```sh
-git clone https://github.com/yourusername/svg-decompressor.git
-cd svg-decompressor
-```
+## Installation  
+Ensure you have **Python 3** installed, then clone the repository and navigate to the project directory.  
 
-## Usage
-1. Place the base64-encoded compressed SVG data inside a file named `build.txt`.
-2. Run the script:
+## Usage  
+1. Place the **base64-encoded compressed SVG data** inside a file (default name is **build.txt**).  
+2. Run the script.  
+3. The script will:  
+   - Decompress and parse the SVG content  
+   - Extract relevant game data  
+   - Save the structured output to a JSON file  
 
-```sh
-python svg_decompressor.py
-```
+## Dependencies  
+This script only uses **built-in Python libraries**, ensuring **maximum compatibility**. No additional installations are required.  
 
-3. The decompressed SVG content will be saved in `decompressed_build.xml`, and its structured representation will be saved in `decompressed_build.json`.
+Used libraries :
+  - base64
+  - zlib
+  - json
+  - xml.etree.ElementTree  
 
-## Dependencies
-This script uses only standard Python libraries:
-- `base64` for decoding
-- `zlib` for decompression
-- `json` for saving structured data
-- `xml.etree.ElementTree` for XML parsing
+## Code Explanation  
+- Recursively removes `None` values from a dictionary or list.  
+- Decodes and decompresses base64-encoded SVG data using multiple methods.  
+- Extracts player **level, class, ascendancy, stats, passive skill tree, skills, and items** from the XML structure.  
+- Saves the extracted data into a structured JSON file.  
 
-No external dependencies are required.  
+## License  
+This project is licensed under the **MIT License** - see the LICENSE file for details.  
 
-No advanced libraries are used, ensuring compatibility with AI models and environments that may have dependency restrictions.
+## Contributing  
+Pull requests are welcome. If you have major changes, please open an issue first to discuss them.  
 
-## Code Explanation
-- `remove_nulls(d)`: Recursively removes `None`, empty lists, and empty dictionaries from a data structure.
-- `xml_to_dict(element)`: Converts an XML tree into a structured dictionary while handling attributes and multiple child elements.
-- `decompress_svg(encoded)`:
-  - Replaces URL-safe base64 characters.
-  - Decodes base64 data.
-  - Attempts to decompress using different `wbits` values (15, -15, 31) to handle variations in zlib compression.
-- The script reads the encoded string from `build.txt`, decompresses it, parses it as XML, removes null values, and writes the output to `decompressed_build.xml` and `decompressed_build.json`.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss your ideas.
-
-## Contact
+## Contact  
 For any questions or suggestions, feel free to reach out or open an issue on GitHub.  
-Creator : [Axel Bouchaud--Roche](https://github.com/AxelBcr)
+Creator: [Axel Bouchaud--Roche](github.com/AxelBcr)
