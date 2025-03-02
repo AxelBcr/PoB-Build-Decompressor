@@ -1,7 +1,7 @@
 # SVG Decompressor
 
 ## Special Note
-This script have been made to decompress SVG encoded file from Path of Building. The main goal is to transform the data into something understandable to any algorithm, AI, or learning model... (but you can use it as you want !)
+This script was created to decompress SVG-encoded files from Path of Building. The main goal is to transform the data into something understandable to any algorithm, AI, or learning model... (but you can use it as you want !)
 
 ## Overview
 This Python script decompresses a base64-encoded and zlib-compressed SVG file, parses its XML structure, and saves both the XML and a JSON representation of the data. It reads the encoded data from `build.txt`, decodes and decompresses it, parses the XML structure, removes null values, and saves the results into `decompressed_build.xml` and `decompressed_build.json`.
@@ -42,7 +42,7 @@ This script uses only standard Python libraries:
 
 No external dependencies are required.  
 
-No advanced libraries are used so even a GPT model can run it without having dependancies issues.
+No advanced libraries are used, ensuring compatibility with AI models and environments that may have dependency restrictions.
 
 ## Code Explanation
 - `remove_nulls(d)`: Recursively removes `None`, empty lists, and empty dictionaries from a data structure.
