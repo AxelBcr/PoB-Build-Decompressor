@@ -129,18 +129,25 @@ def extract_items(xml_root):
     structured_items = []
     for item in xml_root.findall(".//Items/Item"):
         item_attrs = item.attrib
+        item_text = item.text.strip() if item.text else ""
+        item_lines = item_text.split("\n") if item_text else []
+
+        def extract_value(lines, keyword):
+            for line in lines:
+                if keyword in line:
+                    _, _, value = line.partition(": ")
+                    return value.strip() if value else "Unknown"
+            return "Unknown"
+
         item_data = {
             "id": item_attrs.get("id", "Unknown"),
-            "name": "Unknown",
-            "rarity": item_attrs.get("rarity", "Unknown"),
-            "level": item_attrs.get("level", "Unknown"),
-            "quality": item_attrs.get("quality", "Unknown"),
-            "sockets": item_attrs.get("sockets", "None"),
-            "details": []
+            "name": item_lines[1] if len(item_lines) > 1 else "Unknown",  # Extract actual item name
+            "rarity": item_lines[0] if len(item_lines) > 0 else "Unknown",  # Extract Rarity
+            "level": extract_value(item_lines, "Item Level"),
+            "quality": extract_value(item_lines, "Quality"),
+            "sockets": extract_value(item_lines, "Sockets"),
+            "modifiers": [line for line in item_lines if not any(kw in line for kw in ["Item Level:", "Quality", "Sockets:", "Rarity:"])]
         }
-        item_text = item.text.strip() if item.text else ""
-        item_data["details"] = item_text.split("\n") if item_text else []
-        item_data["name"] = item_data["details"][0] if item_data["details"] else "Unknown"
         structured_items.append(item_data)
     return structured_items
 
