@@ -59,4 +59,4 @@ Pull requests are welcome. If you have major changes, please open an issue first
 
 ## Contact  
 For any questions or suggestions, feel free to reach out or open an issue on GitHub.  
-Creator: [Axel Bouchaud--Roche](github.com/AxelBcr)
+Creator: [Axel Bouchaud--Roche](https://github.com/AxelBcr)
