@@ -132,21 +132,25 @@ def extract_items(xml_root):
         item_text = item.text.strip() if item.text else ""
         item_lines = item_text.split("\n") if item_text else []
 
-        def extract_value(lines, keyword):
-            for line in lines:
-                if keyword in line:
-                    _, _, value = line.partition(": ")
-                    return value.strip() if value else "Unknown"
+        def extract_attr(attr_name):
+            for line in item_lines:
+                if attr_name in line:
+                    return line.split(": ")[-1].strip()
             return "Unknown"
 
         item_data = {
             "id": item_attrs.get("id", "Unknown"),
             "name": item_lines[1] if len(item_lines) > 1 else "Unknown",  # Extract actual item name
+            "type": item_lines[2] if len(item_lines) > 2 else "Unknown",  # Extract item type
             "rarity": item_lines[0] if len(item_lines) > 0 else "Unknown",  # Extract Rarity
-            "level": extract_value(item_lines, "Item Level"),
-            "quality": extract_value(item_lines, "Quality"),
-            "sockets": extract_value(item_lines, "Sockets"),
-            "modifiers": [line for line in item_lines if not any(kw in line for kw in ["Item Level:", "Quality", "Sockets:", "Rarity:"])]
+            "level": extract_attr("Item Level"),
+            "required_level": extract_attr("LevelReq"),
+            "quality": extract_attr("Quality"),
+            "sockets": extract_attr("Sockets"),
+            "rune": extract_attr("Rune"),
+            "modifiers": [line for line in item_lines if not any(
+                kw in line for kw in [item_lines[0], item_lines[1], item_lines[2],
+                "Item Level", "Quality", "Sockets", "Rarity", "LevelReq", "Rune"])]
         }
         structured_items.append(item_data)
     return structured_items
