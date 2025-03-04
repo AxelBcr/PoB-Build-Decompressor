@@ -41,6 +41,7 @@ This script only uses **built-in Python libraries**, ensuring **maximum compatib
 
 Used libraries :
   - base64
+  - os
   - zlib
   - json
   - xml.etree.ElementTree  
