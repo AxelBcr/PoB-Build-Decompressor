@@ -287,8 +287,8 @@ if __name__ == "__main__":
     # Decompress and parse build.txt, then save to structured_build.json
     decompress_and_parse("build.txt")
 
-    input_file = "decompressed_build.json"
-    output_file = "structured_build.json"
+    input_file = "decompressed_build.json" #Please don't change
+    output_file = "structured_build.json" #Please don't change
 
     decompressed_data = load_json(input_file)
     structured_data = extract_data(decompressed_data)
