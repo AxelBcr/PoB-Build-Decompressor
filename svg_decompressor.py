@@ -1,4 +1,5 @@
 import base64
+import os
 import zlib
 import json
 import xml.etree.ElementTree as ET
@@ -197,5 +198,7 @@ if __name__ == "__main__":
     decompressed_data = load_json(input_file)
     structured_data = extract_data(decompressed_data)
     save_json(structured_data, output_file)
+
+    os.remove(input_file)
 
     print(f"Structured data saved to {output_file}")
