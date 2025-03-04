@@ -105,134 +105,778 @@
         "EnduranceChargesMax": "3"
     },
     "PassiveTree": {
-        "nodes": [
-            "48773",
-            "2582",
-            "61333",
-            "14226",
-            "42750",
-            "39567",
-            "57821",
-            "56838",
-            "34324",
-            "10131",
-            "50755",
-            "34483",
-            "65204",
-            "6891",
-            "61403",
-            "25520",
-            "47976",
-            "11598",
-            "26034",
-            "4328",
-            "14446",
-            "59694",
-            "38463",
-            "30808",
-            "30657",
-            "4346",
-            "15775",
-            "7621",
-            "56045",
-            "23415",
-            "34621",
-            "36231",
-            "28044",
-            "32763",
-            "44420",
-            "62677",
-            "25434",
-            "31449",
-            "7777",
-            "24786",
-            "17548",
-            "535",
-            "30615",
-            "10364",
-            "9782",
-            "61601",
-            "61419",
-            "17268",
-            "20820",
-            "722",
-            "20677",
-            "24287",
-            "60362",
-            "42805",
-            "38535",
-            "3336",
-            "54983",
-            "45702",
-            "23587",
-            "44516",
-            "46197",
-            "63713",
-            "13724",
-            "44628",
-            "56453",
-            "61834",
-            "28021",
-            "21984",
-            "44357",
-            "9994",
-            "23040",
-            "55621",
-            "40166",
-            "55088",
-            "14267",
-            "37742",
-            "24958",
-            "4157",
-            "2936",
-            "27705",
-            "34168",
-            "60735",
-            "33404",
-            "46554",
-            "39369",
-            "3251",
-            "51741",
-            "59538",
-            "38537",
-            "20024",
-            "44223",
-            "61196",
-            "13419",
-            "17088",
-            "62230",
-            "63132",
-            "42379",
-            "326",
-            "630",
-            "38493",
-            "11604",
-            "8143",
-            "49220",
-            "58016",
-            "56265",
-            "24165",
-            "38541",
-            "16705",
-            "46882",
-            "2113",
-            "44683",
-            "19355",
-            "29959",
-            "56349",
-            "48116",
-            "37691",
-            "4519",
-            "31692",
-            "51707",
-            "52399",
-            "41877",
-            "36085",
-            "14958",
-            "42857",
-            "31765",
-            "13407"
-        ]
+        "nodes": {
+            "48773": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "2582": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "61333": [
+                "Critical Chance",
+                [
+                    "10% increased Critical Hit Chance"
+                ]
+            ],
+            "14226": [
+                "Dance with Death",
+                [
+                    "25% more Skill Speed while Off Hand is empty and you have",
+                    "a One-Handed Martial Weapon equipped in your Main Hand"
+                ]
+            ],
+            "42750": [
+                "Attack Damage",
+                [
+                    "10% increased Attack Damage"
+                ]
+            ],
+            "39567": [
+                "Ingenuity",
+                [
+                    "+25 to Intelligence"
+                ]
+            ],
+            "57821": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "56838": [
+                "Evasion and Energy Shield",
+                [
+                    "12% increased Evasion Rating",
+                    "12% increased maximum Energy Shield"
+                ]
+            ],
+            "34324": [
+                "Spectral Ward",
+                [
+                    "+1 to Maximum Energy Shield per 12 Evasion Rating on Equipped Body Armour"
+                ]
+            ],
+            "10131": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "50755": [
+                "Intelligence",
+                [
+                    "+8 to Intelligence"
+                ]
+            ],
+            "34483": [
+                "Jewel Socket",
+                []
+            ],
+            "65204": [
+                "Overflowing Power",
+                [
+                    "+2 to Maximum Power Charges"
+                ]
+            ],
+            "6891": [
+                "Critical Damage",
+                [
+                    "15% increased Critical Damage Bonus"
+                ]
+            ],
+            "61403": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "25520": [
+                "Resonance",
+                [
+                    "Gain Power Charges instead of Frenzy Charges",
+                    "Gain Frenzy Charges instead of Endurance Charges",
+                    "Gain Endurance Charges instead of Power Charges"
+                ]
+            ],
+            "47976": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "11598": [
+                "Quarterstaff Speed",
+                [
+                    "3% increased Attack Speed with Quarterstaves"
+                ]
+            ],
+            "26034": [
+                "Evasion and Energy Shield",
+                [
+                    "12% increased Evasion Rating",
+                    "12% increased maximum Energy Shield"
+                ]
+            ],
+            "4328": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "14446": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "59694": [
+                "Quarterstaff Critical Damage",
+                [
+                    "18% increased Critical Damage Bonus with Quarterstaves"
+                ]
+            ],
+            "38463": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "30808": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "30657": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "4346": [
+                "Damage on Critical",
+                [
+                    "20% increased Damage if you've dealt a Critical Hit Recently"
+                ]
+            ],
+            "15775": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "7621": [
+                "I am the Thunder...",
+                [
+                    "Gain 10% of Damage as Extra Lightning Damage",
+                    "25% chance on Shocking Enemies to created Shocked Ground"
+                ]
+            ],
+            "56045": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "23415": [
+                "Evasion and Energy Shield",
+                [
+                    "15% increased Evasion Rating",
+                    "15% increased maximum Energy Shield"
+                ]
+            ],
+            "34621": [
+                "Critical Damage",
+                [
+                    "15% increased Critical Damage Bonus"
+                ]
+            ],
+            "36231": [
+                "Critical Damage when consuming a Power Charge",
+                [
+                    "20% increased Critical Damage Bonus if you've consumed a Power Charge Recently"
+                ]
+            ],
+            "28044": [
+                "Coming Calamity",
+                [
+                    "50% increased Cold Damage while affected by Herald of Ice",
+                    "50% increased Fire Damage while affected by Herald of Ash",
+                    "50% increased Lightning Damage while affected by Herald of Thunder"
+                ]
+            ],
+            "32763": [
+                "Jewel Socket",
+                []
+            ],
+            "44420": [
+                "Critical Chance",
+                [
+                    "10% increased Critical Hit Chance"
+                ]
+            ],
+            "62677": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "25434": [
+                "Chill Effect",
+                [
+                    "15% increased Magnitude of Chill you inflict"
+                ]
+            ],
+            "31449": [
+                "Quarterstaff Critical Chance",
+                [
+                    "12% increased Critical Hit Chance with Quarterstaves"
+                ]
+            ],
+            "7777": [
+                "Breaking Point",
+                [
+                    "10% increased Duration of Elemental Ailments on Enemies",
+                    "30% increased Magnitude of Non-Damaging Ailments you inflict"
+                ]
+            ],
+            "24786": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "17548": [
+                "Moment of Truth",
+                [
+                    "25% increased Critical Damage Bonus if you've dealt a Non-Critical Hit Recently",
+                    "20% increased Critical Hit Chance"
+                ]
+            ],
+            "535": [
+                "Critical Damage",
+                [
+                    "15% increased Critical Damage Bonus"
+                ]
+            ],
+            "30615": [
+                "Critical Damage when consuming a Power Charge",
+                [
+                    "20% increased Critical Damage Bonus if you've consumed a Power Charge Recently"
+                ]
+            ],
+            "10364": [
+                "Skill Speed",
+                [
+                    "3% increased Skill Speed"
+                ]
+            ],
+            "9782": [
+                "Critical Damage",
+                [
+                    "15% increased Critical Damage Bonus"
+                ]
+            ],
+            "61601": [
+                "True Strike",
+                [
+                    "+10 to Dexterity",
+                    "20% increased Critical Hit Chance"
+                ]
+            ],
+            "61419": [
+                "Jewel Socket",
+                []
+            ],
+            "17268": [
+                "Shock Effect",
+                [
+                    "15% increased Magnitude of Shock you inflict"
+                ]
+            ],
+            "20820": [
+                "Attack Speed",
+                [
+                    "3% increased Attack Speed"
+                ]
+            ],
+            "722": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "20677": [
+                "For the Jugular",
+                [
+                    "30% increased Critical Damage Bonus",
+                    "+10 to Intelligence"
+                ]
+            ],
+            "24287": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "60362": [
+                "Critical Damage",
+                [
+                    "15% increased Critical Damage Bonus"
+                ]
+            ],
+            "42805": [
+                "Evasion and Energy Shield",
+                [
+                    "12% increased Evasion Rating",
+                    "12% increased maximum Energy Shield"
+                ]
+            ],
+            "38535": [
+                "Stormcharged",
+                [
+                    "40% increased Elemental Damage if you've dealt a Critical Hit Recently",
+                    "20% increased Critical Hit Chance"
+                ]
+            ],
+            "3336": [
+                "Critical Damage when consuming a Power Charge",
+                [
+                    "20% increased Critical Damage Bonus if you've consumed a Power Charge Recently"
+                ]
+            ],
+            "54983": [
+                "Attack Critical Chance",
+                [
+                    "15% increased Critical Hit Chance for Attacks"
+                ]
+            ],
+            "45702": [
+                "Critical Chance",
+                [
+                    "10% increased Critical Hit Chance"
+                ]
+            ],
+            "23587": [
+                "I am the Blizzard...",
+                [
+                    "Gain 10% of Damage as Extra Cold Damage",
+                    "On Freezing Enemies create Chilled Ground"
+                ]
+            ],
+            "44516": [
+                "Quarterstaff Speed",
+                [
+                    "3% increased Attack Speed with Quarterstaves"
+                ]
+            ],
+            "46197": [
+                "Careful Assassin",
+                [
+                    "20% reduced Critical Damage Bonus",
+                    "50% increased Critical Hit Chance"
+                ]
+            ],
+            "63713": [
+                "Sunder my Enemies...",
+                [
+                    "Critical Hits ignore non-negative Enemy Monster Elemental Resistances"
+                ]
+            ],
+            "13724": [
+                "Deadly Force",
+                [
+                    "30% increased Damage if you've dealt a Critical Hit in the past 8 seconds",
+                    "12% increased Critical Hit Chance"
+                ]
+            ],
+            "44628": [
+                "Attack Speed",
+                [
+                    "3% increased Attack Speed"
+                ]
+            ],
+            "56453": [
+                "Killer Instinct",
+                [
+                    "30% increased Attack Damage when on Full Life",
+                    "50% increased Attack Damage when on Low Life"
+                ]
+            ],
+            "61834": [
+                "Jewel Socket",
+                []
+            ],
+            "28021": [
+                "Critical Damage",
+                [
+                    "15% increased Critical Damage Bonus"
+                ]
+            ],
+            "21984": [
+                "Jewel Socket",
+                []
+            ],
+            "44357": [
+                "Critical Chance",
+                [
+                    "12% increased Critical Hit Chance"
+                ]
+            ],
+            "9994": [
+                "Master of the Elements",
+                []
+            ],
+            "23040": [
+                "Critical Damage",
+                [
+                    "15% increased Critical Damage Bonus"
+                ]
+            ],
+            "55621": [
+                "Critical Chance",
+                [
+                    "10% increased Critical Hit Chance"
+                ]
+            ],
+            "40166": [
+                "Deep Trance",
+                [
+                    "8% increased Attack Speed",
+                    "10% reduced Cost of Skills"
+                ]
+            ],
+            "55088": [
+                "Critical Chance",
+                [
+                    "10% increased Critical Hit Chance"
+                ]
+            ],
+            "14267": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "37742": [
+                "Manifold Method",
+                [
+                    "50% increased amount of Mana Leeched",
+                    "25% increased chance to inflict Ailments against Rare or Unique Enemies"
+                ]
+            ],
+            "24958": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "4157": [
+                "Critical Chance",
+                [
+                    "10% increased Critical Hit Chance"
+                ]
+            ],
+            "2936": [
+                "Attack Critical Damage",
+                [
+                    "20% increased Critical Damage Bonus for Attack Damage"
+                ]
+            ],
+            "27705": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "34168": [
+                "Crashing Wave",
+                [
+                    "36% increased Damage if you've dealt a Critical Hit in the past 8 seconds"
+                ]
+            ],
+            "60735": [
+                "Jewel Socket",
+                []
+            ],
+            "33404": [
+                "Eternal Youth",
+                [
+                    "Life Recharges instead of Energy Shield",
+                    "Life Recovery from Flasks applies to Energy Shield instead"
+                ]
+            ],
+            "46554": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "39369": [
+                "Struck Through",
+                [
+                    "Attacks have +1% to Critical Hit Chance"
+                ]
+            ],
+            "3251": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "51741": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "59538": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "38537": [
+                "Heartstopping",
+                [
+                    "+10 to Intelligence",
+                    "25% increased Critical Hit Chance"
+                ]
+            ],
+            "20024": [
+                "Critical Damage",
+                [
+                    "15% increased Critical Damage Bonus"
+                ]
+            ],
+            "44223": [
+                "Critical Damage",
+                [
+                    "15% increased Critical Damage Bonus"
+                ]
+            ],
+            "61196": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "13419": [
+                "Critical Damage",
+                [
+                    "15% increased Critical Damage Bonus"
+                ]
+            ],
+            "17088": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "62230": [
+                "Patient Barrier",
+                [
+                    "60% increased maximum Energy Shield",
+                    "20% slower start of Energy Shield Recharge"
+                ]
+            ],
+            "63132": [
+                "Jewel Socket",
+                []
+            ],
+            "42379": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "326": [
+                "Quarterstaff Critical Chance",
+                [
+                    "12% increased Critical Hit Chance with Quarterstaves"
+                ]
+            ],
+            "630": [
+                "Critical Damage",
+                [
+                    "15% increased Critical Damage Bonus"
+                ]
+            ],
+            "38493": [
+                "Critical Damage",
+                [
+                    "15% increased Critical Damage Bonus"
+                ]
+            ],
+            "11604": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "8143": [
+                "Lead me through Grace...",
+                [
+                    "Gain 1 Spirit for every 6 Energy Shield on equipped Body Armour",
+                    "Gain 1 Spirit for every 15 Evasion Rating on equipped Body Armour",
+                    "Cannot gain Spirit from Equipment"
+                ]
+            ],
+            "49220": [
+                "Flow Like Water",
+                [
+                    "8% increased Attack and Cast Speed",
+                    "+5 to Dexterity and Intelligence"
+                ]
+            ],
+            "58016": [
+                "All Natural",
+                [
+                    "+5% to all Elemental Resistances",
+                    "30% increased Elemental Damage"
+                ]
+            ],
+            "56265": [
+                "Throatseeker",
+                [
+                    "60% increased Critical Damage Bonus",
+                    "20% reduced Critical Hit Chance"
+                ]
+            ],
+            "24165": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "38541": [
+                "Critical Chance",
+                [
+                    "10% increased Critical Hit Chance"
+                ]
+            ],
+            "16705": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "46882": [
+                "Jewel Socket",
+                []
+            ],
+            "2113": [
+                "Martial Artistry",
+                [
+                    "25% increased Accuracy Rating with Quarterstaves",
+                    "25% increased Critical Damage Bonus with Quarterstaves",
+                    "+25 to Dexterity"
+                ]
+            ],
+            "44683": [
+                "SIX",
+                []
+            ],
+            "19355": [
+                "Energy Shield",
+                [
+                    "15% increased maximum Energy Shield"
+                ]
+            ],
+            "29959": [
+                "Critical Damage",
+                [
+                    "15% increased Critical Damage Bonus"
+                ]
+            ],
+            "56349": [
+                "Chaos Inoculation",
+                [
+                    "Maximum Life becomes 1, Immune to Chaos Damage"
+                ]
+            ],
+            "48116": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "37691": [
+                "Attack Damage",
+                [
+                    "10% increased Attack Damage"
+                ]
+            ],
+            "4519": [
+                "Damage on Critical",
+                [
+                    "20% increased Damage if you've dealt a Critical Hit Recently"
+                ]
+            ],
+            "31692": [
+                "Critical Chance",
+                [
+                    "10% increased Critical Hit Chance"
+                ]
+            ],
+            "51707": [
+                "Enhanced Reflexes",
+                [
+                    "30% increased Evasion Rating",
+                    "8% increased Dexterity"
+                ]
+            ],
+            "52399": [
+                "Quarterstaff Critical Damage",
+                [
+                    "18% increased Critical Damage Bonus with Quarterstaves"
+                ]
+            ],
+            "41877": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "36085": [
+                "Serrated Edges",
+                [
+                    "10% increased Critical Hit Chance for Attacks",
+                    "30% increased Attack Damage against Rare or Unique Enemies"
+                ]
+            ],
+            "14958": [
+                "Critical Chance",
+                [
+                    "10% increased Critical Hit Chance"
+                ]
+            ],
+            "42857": [
+                "Skill Speed",
+                [
+                    "3% increased Skill Speed"
+                ]
+            ],
+            "31765": [
+                "Attribute",
+                [
+                    "+5 to Strength"
+                ]
+            ],
+            "13407": [
+                "Heartbreaking",
+                [
+                    "35% increased Critical Damage Bonus",
+                    "+10 to Strength"
+                ]
+            ]
+        }
     },
     "Skills": [
         {

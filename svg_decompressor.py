@@ -3,6 +3,7 @@ import os
 import zlib
 import json
 import xml.etree.ElementTree as ET
+import re
 
 #%% Useful functions
 def load_json(file_path): # Load decompressed JSON
@@ -188,8 +189,102 @@ def extract_data(decompressed_data): # Extract and structure the data
     }
     return structured_data
 
+#%% Extract nodes from tree files
+def extract_nodes_as_list(filename):
+    with open(filename, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    # Locate the nodes block.
+    start_marker = "nodes={"
+    start_index = content.find(start_marker)
+    if start_index == -1:
+        print("Could not find 'nodes={' in the file.")
+        return {}
+    parse_start = start_index + len(start_marker)
+
+    # Use brace counting to extract the entire nodes block.
+    brace_count = 1
+    pos = parse_start
+    while pos < len(content) and brace_count > 0:
+        if content[pos] == '{':
+            brace_count += 1
+        elif content[pos] == '}':
+            brace_count -= 1
+        pos += 1
+
+    nodes_block = content[parse_start: pos - 1].strip()
+
+    node_dict = {}
+    idx = 0
+    pattern_entry = r"\[(\d+)\]\s*=\s*\{"
+    while True:
+        m = re.search(pattern_entry, nodes_block[idx:])
+        if not m:
+            break  # no more node entries
+        # Table key (not used) is m.group(1)
+        node_start = idx + m.end()  # position just after the opening '{'
+        brace_count = 1
+        pos2 = node_start
+        while pos2 < len(nodes_block) and brace_count > 0:
+            if nodes_block[pos2] == '{':
+                brace_count += 1
+            elif nodes_block[pos2] == '}':
+                brace_count -= 1
+            pos2 += 1
+        node_content = nodes_block[node_start: pos2 - 1]
+
+        # Extract the "skill" field (node id) and "name" field.
+        skill_match = re.search(r"\bskill\s*=\s*(\d+)", node_content)
+        name_match = re.search(r'\bname\s*=\s*"([^"]+)"', node_content)
+
+        # Extract stats block if present.
+        stats_list = []
+        stats_match = re.search(r"\bstats\s*=\s*\{(.*?)\}", node_content, re.DOTALL)
+        if stats_match:
+            stats_block = stats_match.group(1)
+            stats_list = re.findall(r'"([^"]+)"', stats_block)
+
+        if skill_match and name_match:
+            skill_id = int(skill_match.group(1))
+            node_name = name_match.group(1)
+            # Store as [name, stat] where stat is the list of stats.
+            node_dict[skill_id] = [node_name, stats_list]
+        # Move idx past this node entry.
+        idx = node_start + len(node_content)
+
+    return node_dict
+
+#%% ID transform for passive tree
+def id_transform(nodes_data):
+
+    # Load structured_build.json
+    with open("structured_build.json", "r") as build_file:
+        build_data = json.load(build_file)
+
+    # Extract Passive Tree Nodes
+    passive_tree_nodes = build_data.get("PassiveTree", {}).get("nodes", [])
+
+    # Create the mapping dictionary
+    node_mapping = {}
+    for node_id in passive_tree_nodes:
+        node_id_str = int(node_id)  # Convert to string for consistency with nodes.json keys
+        if node_id_str in nodes_data.keys():
+            node_name = nodes_data[node_id_str][0]
+            node_stats = nodes_data[node_id_str][1]
+            node_mapping[node_id_str] = [node_name, node_stats]
+        else:
+            node_mapping[node_id_str] = ["Unknown", []]  # Handle missing nodes
+
+    # Replace nodes structure in structured_build.json
+    build_data["PassiveTree"]["nodes"] = node_mapping
+
+    # Save the updated structured_build.json
+    with open("structured_build.json", "w") as out_file:
+        json.dump(build_data, out_file, indent=4)
+
 #%% Main
 if __name__ == "__main__":
+    # Decompress and parse build.txt, then save to structured_build.json
     decompress_and_parse("build.txt")
 
     input_file = "decompressed_build.json"
@@ -199,6 +294,12 @@ if __name__ == "__main__":
     structured_data = extract_data(decompressed_data)
     save_json(structured_data, output_file)
 
-    os.remove(input_file)
+    os.remove(input_file) # Remove decompressed file
+
+    # Load nodes and save to nodes.json
+    nodes = extract_nodes_as_list("tree.lua")
+
+    # ID transform for passive tree
+    id_transform(nodes)
 
     print(f"Structured data saved to {output_file}")
