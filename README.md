@@ -65,14 +65,14 @@ PoB-SVG-Decompressor-main/
   Includes functions to extract node definitions from Lua files. The Lua scripts help map node indices to skill names and associated stats, enabling enhanced processing of the passive tree.
 
 ## Installation
-
-1. **Alternative**
-   Just download the svg_decompressor.exe   
    
-2. **Prerequisites:**  
+1. **Prerequisites:**  
    Ensure you have Python 3 installed.
 
-3. **Clone the Repository:**
+2. **Run the .exe**   
+   Just download the svg_decompressor.exe   
+
+3. **Or Clone the Repository:**
 
    ```bash
    git clone https://github.com/your-username/PoB-SVG-Decompressor.git
@@ -82,9 +82,10 @@ PoB-SVG-Decompressor-main/
 ## Usage
 
 1. **Prepare Your Data:**  
-   Place your base64-encoded and compressed SVG data into a file. An example (`build.txt`) is provided in the `Example/` directory.   
+   Place your base64-encoded and compressed SVG data into a **.txt** file. An example (`build.txt`) is provided in the `Example/` directory.   
 
-2. **Run the .exe file**
+2. **Run the .exe file**   
+   You will need the **file path** to your build.txt.   
 
 3. **Or Run the Decompression Script:**
 
