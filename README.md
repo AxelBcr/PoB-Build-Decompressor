@@ -66,22 +66,27 @@ PoB-SVG-Decompressor-main/
 
 ## Installation
 
-1. **Prerequisites:**  
+1. **Alternative**
+   Just download the svg_decompressor.exe   
+   
+2. **Prerequisites:**  
    Ensure you have Python 3 installed.
 
-2. **Clone the Repository:**
+3. **Clone the Repository:**
 
    ```bash
    git clone https://github.com/your-username/PoB-SVG-Decompressor.git
    cd PoB-SVG-Decompressor
    ```
-
+   
 ## Usage
 
 1. **Prepare Your Data:**  
-   Place your base64-encoded and compressed SVG data into a file. An example (`build.txt`) is provided in the `Example/` directory.
+   Place your base64-encoded and compressed SVG data into a file. An example (`build.txt`) is provided in the `Example/` directory.   
 
-2. **Run the Decompression Script:**
+2. **Run the .exe file**
+
+3. **Or Run the Decompression Script:**
 
    ```bash
    python svg_decompressor.py
@@ -91,7 +96,7 @@ PoB-SVG-Decompressor-main/
    - It extracts player information, stats, passive tree data, skills (and gems), and items.
    - The final structured output is saved as `structured_build.json`.
 
-3. **Lua Scripts:**  
+4. **Lua Scripts:**  
    The Lua scripts (`NodeIndexMapping.lua` and `tree.lua`) are provided for additional processing.
 
 ## Dependencies
